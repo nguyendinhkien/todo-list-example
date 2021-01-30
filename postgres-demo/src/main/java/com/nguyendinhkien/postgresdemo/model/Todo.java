@@ -8,7 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "todos")
+@Table(name = "todolist")
 @Getter
 @Setter
 public class Todo extends AuditModel{
