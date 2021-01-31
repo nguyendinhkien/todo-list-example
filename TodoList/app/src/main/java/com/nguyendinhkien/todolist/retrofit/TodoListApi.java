@@ -17,8 +17,8 @@ public interface TodoListApi {
     Call<TodoList> getTodoList();
     @POST("todolist")
     Call<Todo> addTodo(@Body Todo todo);
-    @PUT("todolist/edit/{id}")
+    @PUT("todolist/{id}")
     Call<Todo>editTodo(@Path("id")int id, @Body Todo todo);
-    @DELETE("todolist/delete/{id}")
+    @DELETE("todolist/{id}")
     Call<ResponseBody> deleteTodo(@Path("id")int id);
 }

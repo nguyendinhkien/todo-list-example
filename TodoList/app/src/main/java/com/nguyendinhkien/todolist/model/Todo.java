@@ -2,7 +2,9 @@ package com.nguyendinhkien.todolist.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Todo {
+import java.io.Serializable;
+
+public class Todo implements Serializable {
     @SerializedName("id")
     private int id;
     @SerializedName("title")
@@ -13,6 +15,10 @@ public class Todo {
     public Todo(String title, String detail) {
         this.title = title;
         this.detail = detail;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {
